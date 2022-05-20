@@ -1,0 +1,168 @@
+body {
+    font-family: VenrynSans;
+    margin: 0;
+    background-color:#c3d3d4 ;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, li {
+    font-family: VenrynSans;
+    color:black;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    font-family: VenrynSans;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: grid;
+    width: 100%;
+    height: 75px;
+    grid-template-columns:repeat(12, 1fr);
+    grid-gap: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    background: cadetblue;
+
+    color: black;
+}
+
+.logo {
+    grid-column: 1/3;
+    padding: 0 5px;
+}
+
+nav {
+    grid-column: 3/13;
+    line-height: 75px;
+}
+
+nav a {
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+main {
+    padding-top: 75px;
+}
+
+section {
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.article-title {
+    font-size: 3em;
+
+}
+
+.article-tags {
+    display: block;
+}
+.article-tags a{
+    color: grey;
+}
+.article-author{
+    color:grey;
+}
+.article-author:before{
+    content: "\2014";
+    color: grey;
+    font-family: VenrynSans;
+    padding-right: 4px;
+}
+.article-date{
+    color: grey;
+}
+
+article img{
+    display: block;
+    width: 100%;
+}
+article img + .description{
+    color: grey;
+    font-style: italic;
+}
+.quote-figure {
+    margin: 10px 15px;
+}
+
+blockquote {
+    margin: 0;
+    width: min(600px, 100%);
+}
+
+blockquote p {
+    padding: 15px;
+
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    font-size: 1.5em;
+    content: '\201C';
+}
+
+blockquote p::after {
+    font-size: 1.5em;
+    content: '\201D';
+}
+.comment img{
+    display: block;
+    width: 75px;
+
+    border-radius: 50px;
+}
+.comment{
+    display: flex;
+    background: lightgrey;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255,0) 50%, rgba(255,255,255,1) 100%);
+    box-shadow: 2px 2px grey;
+    margin: 4px;
+    border-radius: 10px;
+    width:600px;
+    color: black;
+    height: 75px;
+    transition: all 0.1ms 0.1ms ease-in-out;
+}
+.comment:hover{
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 4px grey;
+}
+.comment:hover .comment-content{
+    text-shadow: 1px 1px grey;
+}
+.comment-author{
+    display: block;
+}
+.comment-content{
+    display: block
+}
+.comment-data{
+    display: block;
+}
+.comment div{
+    display: block;
+    padding-left: 4px;
+}
+.comments .comment:nth-child(even){
+    background: grey;
+
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255,0) 50%, rgba(255,255,255,1) 100%);
+}

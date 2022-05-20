@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <%-include('../partials/head')-%>
+</head>
+<body>
+
+<header>
+    <%-include('../partials/header')-%>
+</header>
+
+<main>
+    <section>
+        <article>
+            <div class="orticle">
+                <h3 class="article-title">
+                    <%=post.title%>
+                </h3>
+
+                </span>
+                <span class="article-date"><%=post.date%>></span>
+                <span class="article-author">Unintellegent Captain</span>
+
+                <p>
+                    <%=post.body%>
+                </p>
+
+                <div class="comment-form">
+                    <form>
+                        <p><label for="name">Имя пользвателя:</label>
+                            <input id="name" type="text" required placeholder="Введите имя"></p>
+                        <p><label for="email">email:</label>
+                            <input id="email" type="email" placeholder="Введите email"></p>
+                        <p><label for="comment">Комментарий:</label>
+                            <textarea id="comment" required placeholder="Оставьте комментарий">
+                        </textarea></p>
+                        <p><input type="submit"></p>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <%-include('../partials/footer')-%>
+</footer>
+
+</body>
+</html>
