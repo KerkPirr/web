@@ -45,13 +45,16 @@ app.get('/feed',(req,res)=>{
 app.get('/feed/:postID',(req,res)=>{
     let title = "name"
     let index = req.params["postID"];
+    if (index<Posts.length){
     res.render('pages/post',{
         app_title: title,
         postID: index,
         post:Posts[index]
-    })
+    })}
+    else{
+        res.send("<H1>404</H1>")
+    }
 })
-app.post
 
 app.listen(port,()=>{
     console.log(`Listening on port ${port}`)
